@@ -10,3 +10,9 @@ main: # Start of code section
 # begins getting user input
 
 li $v0, 8   # read string command
+la $a0, user_input #stores user string into register
+li $a1, 85000 
+syscall # calls previous instructions
+
+add $t7, $0, 0 #initialises register
+add $t7, $0, 0 #initialises register
