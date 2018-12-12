@@ -16,3 +16,10 @@ syscall # calls previous instructions
 
 add $t7, $0, 0 #initialises register
 add $t7, $0, 0 #initialises register
+la $t8, user_input # copy address of user input into $t8			
+lb $t7,0($t8) # loads the byte value of $t8 into $t7	
+
+#checks for empty input
+
+beq $t7, 10, No_input_error # branches if $t7 is a new line command	
+beq $t7, 0 No_input_error # branches if there is literally no input in $t7	
